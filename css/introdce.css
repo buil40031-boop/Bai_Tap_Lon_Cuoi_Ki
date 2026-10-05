@@ -1,0 +1,182 @@
+body {
+  background: url('../images/bgandct.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  position: sticky;
+  top: 20px;
+  left: 35px;
+  right: 20px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  width: 95%;
+  z-index: 1000;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.left_navbar img{
+  width: 65px;
+  height: auto;
+  object-fit: contain;
+}
+
+.center_navbar {
+  display: flex;
+  gap: 35px;
+  margin: 0px 0px 0px 150px;
+}
+
+.right_navbar {
+  display: flex;
+  gap: 15px;
+}
+
+/* --- TỐI ƯU CĂN LỀ VÀ TRÌNH BÀY NỘI DUNG --- */
+.content {
+  background: rgba(255, 255, 255, 0.85); /* Đổi sang nền trắng trong suốt để đọc chữ nét hơn */
+  backdrop-filter: blur(5px);
+  width: 900px;
+  max-width: 90%;
+  height: auto;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 25px;
+  margin: 50px auto;
+  padding: 40px 45px; /* Tăng padding để tạo khoảng thở */
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.content .page-title {
+  text-align: center;
+  color: #8B0000;
+  font-size: 28px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.content .company-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1.5px solid #d4af37;
+  padding-bottom: 20px;
+}
+
+.content .company-header h2 {
+  font-size: 20px;
+  margin: 5px 0;
+  color: #333;
+}
+
+.content .company-header .brand-title {
+  font-size: 26px;
+  color: #b8860b;
+  margin: 8px 0;
+  letter-spacing: 1px;
+}
+
+.content .company-header .tagline {
+  margin: 6px 0;
+  font-size: 16px;
+  color: #444;
+}
+
+.content .company-header .highlight-red {
+  color: #c00;
+  font-weight: bold;
+}
+
+.content .company-header .bold {
+  font-weight: 600;
+}
+
+/* Định dạng đoạn văn bản chuẩn xuất bản */
+.content .article-text {
+  font-size: 17px;
+  line-height: 1.8; /* Tăng khoảng cách giữa các dòng */
+  color: #2c2c2c;
+  text-align: justify; /* Căn đều 2 bên cho văn bản */
+}
+
+.content .article-text p {
+  margin-bottom: 20px;
+  text-indent: 30px; /* Thụt đầu dòng mỗi đoạn văn */
+}
+
+.content .article-text p:first-child {
+  background: rgba(247, 244, 156, 0.3);
+  padding: 15px 20px;
+  border-left: 4px solid #b8860b;
+  border-radius: 4px;
+  text-indent: 0; /* Đoạn trích dẫn không cần thụt đầu dòng */
+  font-style: italic;
+}
+
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* footer */
+.footer-container {
+  display: flex;
+  border-top: 2.5px solid black;
+  background: #f7f49c;
+  margin-top: auto;
+}
+
+.footer_image_head img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-image_tail img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+  right: 0;
+}
+
+.footer-content {
+  display: flex;
+}
+
+.footer-content .nah {
+  padding: 25px 20px 0 20px;
+}
+
+.footer-content .nah a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  padding: 5px 0;
+}

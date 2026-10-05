@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/product_detail.css">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <title>Product Details</title>
+</head>
+<body>
+    <div class="navbar">
+      <div class="left_navbar">
+        <a href="../index.html"><img src="../images/logo.png"></a>
+      </div>
+      <div class="center_navbar">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../html/introduce.html">Giới thiệu</a>
+        <a href="../html/product.html">Sản phẩm</a>
+        <a href="../html/contact.html">Liên hệ</a>
+      </div>
+      <div class="right_navbar">
+        <a href="../html/cart.html" id="cart" style="position: relative;">
+          <i class="bx bx-cart"></i>
+          <span id="cart-count">0</span>
+        </a>
+        <a href="../html/account.html" id="account"><i class="bx bx-user"></i></a>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="product_image">
+            <!-- Ảnh chính sản phẩm -->
+            <img id="main-product-img" src="" alt="Ảnh sản phẩm">
+            
+            <h3 style="text-align: center; font-size: 25px; font-weight: bold;">SẢN PHẨM TƯƠNG TỰ</h3>
+            <div id="similar-products-list">
+                <!-- Sản phẩm tương tự sẽ render ở đây -->
+            </div>
+        </div>
+
+        <div class="product_options">
+            <h1 id="product-name"></h1>
+            <div class="price-box">
+                <span id="product-price"></span>
+                <span id="product-old-price"></span>
+            </div>
+            
+            <div id="product-options"></div>
+
+            <div class="product-guides">
+                <p><b>Hướng dẫn sử dụng:</b> <span id="product-usage"></span></p>
+                <p><b>Hướng dẫn bảo quản:</b> <span id="product-storage"></span></p>
+                <p><b>Cảnh báo:</b> <span id="product-warning"></span></p>
+            </div>
+            <div class="actions">
+                <button id = "like"><i class="bx bx-bookmark"></i></button>
+                <button id = "plus-to-cart">Thêm vào giỏ hàng</button>
+                <button id = "buy-now">Mua ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="detail_properties">
+        <section class="detail">
+            <h2>THÔNG TIN SẢN PHẨM</h2>
+            <p id="product-description"></p>
+        </section>
+
+        <section class="detail_option">
+            <h2>MÔ TẢ CÁC OPTION</h2>
+            <div id="option-descriptions"></div>
+        </section>
+    </div>
+
+    <div class="footer-container">
+      <div>
+        <div class="footer_image_head">
+          <img src="../images/logo.png"/>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <div class="nah">
+          <h3 style="font-size: 22px;">Tổ Yến & Yến Sào Ensure Nest</h3>
+          <p><i class="bx bx-location"></i> Phan Tây Nhạc, Xuân Phương, Hà Nội</p>
+          <p><i class="bx bx-phone"></i> +84 123456789</p>
+          <p><i class="bx bx-envelope"></i>congty@gmail.com</p>
+        </div>
+        
+        <div class="nah">
+          <p style="font-size: 22px;">Tin tức</p>
+          <a href="https://medlatec.vn/tin-tuc/cach-chung-yen-voi-tao-do-sao-cho-dung-de-dam-bao-dinh-duong-tot-cho-suc-khoe?gad_source=1&gad_campaignid=23751994256&gbraid=0AAAAADN9HXzT2l1qWwuYzIWfhpJ5bXCtS&gclid=CjwKCAjwqonVBhA4EiwA9wYJ3drVQFPQgridoISDCO2EazByIENBCzy0J8Ygdw6sBPXMJnuv2mucdxoCE_YQAvD_BwE">Cẩm nang chế biến</a>
+          <a href="https://www.vinmec.com/vie/bai-viet/gia-tri-dinh-duong-trong-yen-sao-vi">Giá trị dinh dưỡng và công dụng</a>
+        </div>
+    
+        <div class="nah">
+          <p style="font-size: 22px;">Hỗ trợ</p>
+          <p>Hướng dẫn đặt hàng</p>
+          <p>Hình thức thanh toán</p>
+          <p>Phương thức vận chuyển</p>
+          <p>Chính sách đổi trả</p>
+        </div>
+
+        <div class="footer-image_tail">
+          <img src="../images/nest.png"/>
+        </div>
+
+      </div>
+    </div>
+    <div id="toast"></div>
+    <script src="../js/product_detail.js"></script>
+</body>
+</html>

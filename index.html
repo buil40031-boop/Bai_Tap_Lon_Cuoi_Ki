@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="navbar">
+      <div class="left_navbar">
+        <a href="index.html" id="logo"><img src="./images/logo.png"></a>
+      </div>
+      <div class="center_navbar">
+        <a href="index.html">Trang chủ</a>
+        <a href="./html/introduce.html">Giới thiệu</a>
+        <a href="./html/product.html">Sản phẩm</a>
+        <a href="./html/contact.html">Liên hệ</a>
+      </div>
+      <div class="right_navbar">
+         <a href="./html/cart.html" id="cart" style="position: relative;">
+          <i class="bx bx-cart"></i>
+          <span id="cart-count">0</span>
+        </a>
+        <a href="#" id="account"><i class="bx bx-user"></i></a>
+      </div>
+    </div>
+
+    <!-- Banner Ảnh Phía Trên -->
+    <section class="top-banner">
+        <img src="./images/banner.jpg" alt="Banner">
+    </section>
+    <div class="container">
+        <!-- Khung sản phẩm Nổi bật -->
+        <section class="products-section">
+            <h2>Sản phẩm nổi bật</h2>
+            <div class="product-grid" data-category="hot"></div>
+        </section>
+
+        <!-- Khung sản phẩm Bán chạy -->
+        <section class="products-section margin-top">
+            <h2>Sản phẩm bán chạy</h2>
+            <div class="product-grid" data-category="bestseller"></div>
+        </section>
+    </div>
+
+    <div class="footer-container">
+      <div class="footer_image_head">
+        <img src="./images/logo.png"/>
+      </div>
+
+      <div class="footer-content">
+        <div class="nah">
+          <h3 style="font-size: 20px;">Tổ Yến & Yến Sào Ensure Nest</h3>
+          <p><i class="bx bx-location"></i> Phan Tây Nhạc, Xuân Phương, Hà Nội</p>
+          <p><i class="bx bx-phone"></i> +84 123456789</p>
+          <p><i class="bx bx-envelope"></i> congty@gmail.com</p>
+        </div>
+        
+        <div class="nah">
+          <p style="font-size: 18px; font-weight: bold;">Tin tức</p>
+          <a href="#">Cẩm nang chế biến</a>
+          <a href="#">Giá trị dinh dưỡng và công dụng</a>
+        </div>
+
+        <div class="nah">
+          <p style="font-size: 18px; font-weight: bold;">Hỗ trợ</p>
+          <p>Hướng dẫn đặt hàng</p>
+          <p>Hình thức thanh toán</p>
+          <p>Phương thức vận chuyển</p>
+          <p>Chính sách đổi trả</p>
+        </div>
+
+        <div class="footer-image_tail">
+          <img src="./images/nest.png"/>
+        </div>
+      </div>
+    </div>
+
+    <!-- Nút cuộn lên đầu trang -->
+    <button id="backToTop" title="Lên đầu trang"><i class="bx bx-chevron-up"></i></button>
+
+    <div id="toast"></div>
+    <script src="./js/index.js"></script>
+</body>
+</html>

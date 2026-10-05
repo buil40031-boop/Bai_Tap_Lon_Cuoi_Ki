@@ -1,0 +1,316 @@
+body {
+  background: url('../images/bgandct.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  position: sticky;
+  top: 20px;
+  left: 30px;
+  right: 10px;
+  width: 95%;
+  border-radius: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.left_navbar img {
+  width: 65px;
+  height: auto;
+  object-fit: contain;
+}
+
+.center_navbar {
+  display: flex;
+  gap: 35px;
+}
+
+.right_navbar {
+  display: flex;
+  gap: 15px;
+}
+
+.right_navbar a {
+  font-size: 22px;
+}
+
+.container {
+    margin-top: 70px;
+}
+
+.container {
+  display: flex;
+}
+
+#main-product-img {
+  width: 300px;
+  height: 350px;
+  margin-left: 125px;
+  border-radius: 15px;
+}
+
+.product_options {
+  background: white;
+  border: none;
+  border-radius: 25px;
+  height: fit-content; /* Giúp khung trắng chỉ cao vừa đúng bằng nội dung bên trong */
+  padding: 25px 30px;  /* Thêm khoảng cách đệm inside cho đẹp mắt, không bị dính viền */
+  align-self: flex-start; /* Tránh việc bị flex-container kéo giãn chiều cao theo ảnh */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+}
+
+.price-box {
+  font-size: 19px;
+}
+
+.opt-btn {
+  font-size: 17px;
+  border: none;
+  border-radius: 10px;
+  padding: 7px 20px;
+}
+
+#plus-to-cart, #buy-now, #like {
+  font-size: 19px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+#plus-to-cart:hover, #buy-now:hover {
+  background: #ff4d4d;
+}
+
+.product-guides {
+  font-size: 17px;
+}
+
+.detail_properties {
+  background: white;
+  width: 95%;
+  margin: 50px 25px 50px 25px;
+  padding-left: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#product-name {
+  margin-top: 0;
+}
+
+#product-description, #option-descriptions {
+  font-size: 19px;
+}
+
+/* thẻ sản phẩm tương tự */
+.product_card {
+  width: 260px;             
+  padding: 20px;
+  margin: 0;           
+  background: darkgoldenrod;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, .04);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.product_card .card-img {
+  width: 100%;
+  height: 220px;
+  padding: 0;           
+  background: white;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.product_card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.card_content .product_desc {
+  color: white;
+  margin-bottom: 15px;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 38px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+}
+
+.card_content h3 {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding-top: 12px;
+}
+
+.card_content p {
+  color: white;
+}
+
+.buy_now {
+  width: 100%;
+  padding: 7px 0;
+  cursor: pointer;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  margin-top: auto;   
+}
+
+.buy_now:hover {
+  font-weight: bold;
+}
+
+.card_price_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 12px;
+}
+
+.card_price_row .price {
+  color: white;
+  font-weight: bold;
+}
+
+
+.product_properties {
+  text-decoration: none;
+  color: white;
+  margin-left: 0; 
+  padding: 6px 15px;
+  border: 1px solid white;
+  border-radius: 25px;
+  font-size: 14px;
+}
+
+.product_properties:hover{
+  background: #ff4d4d;
+}
+
+#similar-products-list {
+  display: flex;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+/* Này là cái chấm đỏ trên đầu cart */
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Trạng thái nút Like bình thường */
+#like {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Trạng thái khi ĐÃ YÊU THÍCH (Bôi đỏ) */
+#like.active {
+  background-color: #ff4d4d;
+  color: white;
+  border-color: #ff4d4d;
+}
+
+#like.active i {
+  color: white;
+}
+
+/* cái của nợ xanh xanh nhảy từ navbar xuống */
+#toast {
+  position: fixed;
+  top: 120px; 
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px) scale(0.9); 
+  
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 20px; 
+  font-weight: bold;
+  font-size: 19px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+  z-index: 9999;
+}
+
+#toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0) scale(1); /* Hiện rõ và thả đúng vị trí giữa */
+}
+
+/* footer */
+.footer-container {
+  display: flex;
+  border-top: 2.5px solid black;
+  background: #f7f49c;
+  margin-top: auto;
+}
+
+.footer_image_head img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+}
+
+.footer-image_tail img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  position: absolute;
+  right: 0;
+}
+
+.footer-content {
+  display: flex;
+}
+
+.footer-content .nah {
+  padding: 25px 20px 0 20px;
+}
+
+.footer-content .nah a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  padding: 5px 0;
+}

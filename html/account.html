@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="../css/account.css">
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+      <div class="left_navbar">
+        <a href="../index.html" id="logo"><img src="../images/logo.png"></a>
+      </div>
+      <div class="center_navbar">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../html/introduce.html">Giới thiệu</a>
+        <a href="../html/product.html">Sản phẩm</a>
+        <a href="../html/contact.html">Liên hệ</a>
+      </div>
+      <div class="right_navbar">
+        <a href="../html/cart.html" id="cart" style="position: relative;">
+          <i class="bx bx-cart"></i>
+          <span id="cart-count">0</span>
+        </a>
+        <a href="#" id="account"><i class="bx bx-user"></i></a>
+      </div>
+    </div>
+
+    <!-- 1. TRANG TÀI KHOẢN CHÍNH -->
+    <div id="head_account_page" class="auth_card">
+        <div class="head">
+            <h2>Tài khoản</h2>
+            <p>Trang tài khoản</p>
+        </div>
+        <div class="container">
+            <div class="links">
+                <div class="avatar"></div>
+                <a href="#" class="btn_to_head">Trang tài khoản</a>
+                <a href="#" class="btn_to_cart">Đơn hàng</a>
+                <a href="#" class="btn_to_address">Địa chỉ</a>
+                <a href="#" class="btn_to_account">Tài khoản</a>
+                <a href="#" class="btn_to_logout">Đăng xuất</a>
+            </div>
+            <div id="notice_head_account_page" class="notice">
+                <p>Xin chào...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. TRANG ĐƠN HÀNG -->
+    <div id="cart_page" class="auth_card hidden">
+        <div class="head">
+            <h2>Tài khoản</h2>
+            <p>Đơn hàng</p>
+        </div>
+        <div class="container">
+            <div class="links">
+                <div class="avatar"></div>
+                <a href="#" class="btn_to_head">Trang tài khoản</a>
+                <a href="#" class="btn_to_cart">Đơn hàng</a>
+                <a href="#" class="btn_to_address">Địa chỉ</a>
+                <a href="#" class="btn_to_account">Tài khoản</a>
+                <a href="#" class="btn_to_logout">Đăng xuất</a>
+            </div>
+            
+            <div id="notice_cart_page" class="notice">
+                <!-- Khung thông báo khi CHƯA CÓ đơn hàng -->
+                <div id="empty_orders_box" class="empty_box hidden">
+                    <p>Bạn không có đơn hàng nào</p>
+                </div>
+
+                <!-- Danh sách khi CÓ đơn hàng -->
+                <div id="orders_page" class="hidden">
+                    <h2>Lịch sử đơn hàng</h2>
+                    <div id="orders_list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. TRANG ĐỊA CHỈ -->
+    <div id="address_page" class="auth_card hidden">
+        <div class="head">
+            <h2>Tài khoản</h2>
+            <p>Địa chỉ</p>
+        </div>
+        <div class="container">
+            <div class="links">
+                <div class="avatar"></div>
+                <a href="#" class="btn_to_head">Trang tài khoản</a>
+                <a href="#" class="btn_to_cart">Đơn hàng</a>
+                <a href="#" class="btn_to_address">Địa chỉ</a>
+                <a href="#" class="btn_to_account">Tài khoản</a>
+                <a href="#" class="btn_to_logout">Đăng xuất</a>    
+            </div>
+
+            <div id="notice_address_page" class="notice">
+                <!-- Chưa có địa chỉ -->
+                <div id="no_address_info">
+                    <p>Địa chỉ nhận hàng</p>
+                    <p>Bạn chưa có địa chỉ nhận hàng</p>
+                    <a href="#" id="to_address_submit">Thiết lập tại đây</a>
+                </div>
+
+                <!-- Đã có địa chỉ -->
+                <div id="has_address_info" class="hidden">
+                    <p style="font-weight: bold; margin-bottom: 10px;">Địa chỉ nhận hàng mặc định</p>
+                    <div id="address_card_details" class="address_card"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. TRANG THIẾT LẬP/SỬA ĐỊA CHỈ -->
+    <div id="address_submit_page" class="auth_card hidden">
+        <div class="head">
+            <h2>Tài khoản</h2>
+            <p>Cập nhật địa chỉ</p>
+        </div>
+        <div class="container">
+            <div class="links">
+                <div class="avatar"></div>
+                <a href="#" class="btn_to_head">Trang tài khoản</a>
+                <a href="#" class="btn_to_cart">Đơn hàng</a>
+                <a href="#" class="btn_to_address">Địa chỉ</a>
+                <a href="#" class="btn_to_account">Tài khoản</a>
+                <a href="#" class="btn_to_logout">Đăng xuất</a>
+            </div>
+            <div class="form_address">
+                <h3>Thêm / Sửa địa chỉ</h3>
+                <input type="text" id="addr_fullname" placeholder="Họ và tên">
+                <input type="text" id="addr_phone" placeholder="Số điện thoại">
+                <input type="text" id="addr_country" placeholder="Quốc gia" value="Việt Nam">
+                <input type="text" id="addr_city" placeholder="Tỉnh / Thành phố">
+                <input type="text" id="addr_ward" placeholder="Quận / Huyện / Phường">
+                <input type="text" id="addr_detail" placeholder="Địa chỉ chi tiết (Số nhà, tên đường...)">
+                <button id="save_address" class="btn_submit">Lưu địa chỉ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. TRANG ĐỔI MẬT KHẨU / THÔNG TIN -->
+    <div id="change_p_account_page" class="auth_card hidden">
+        <div class="head">
+            <h2>Tài khoản</h2>
+            <p>Đổi thông tin</p>
+        </div>
+        <div class="container">
+            <div class="links">
+                <div class="avatar"></div>
+                <a href="#" class="btn_to_head">Trang tài khoản</a>
+                <a href="#" class="btn_to_cart">Đơn hàng</a>
+                <a href="#" class="btn_to_address">Địa chỉ</a>
+                <a href="#" class="btn_to_account">Tài khoản</a>
+                <a href="#" class="btn_to_logout">Đăng xuất</a>
+            </div>
+            <div class="form_change_acc">
+                <h3>Đổi thông tin tài khoản</h3>
+                <input type="text" id="acc_name" placeholder="Họ và tên">
+                <input type="email" id="acc_email" placeholder="Email" disabled>
+                <input type="password" id="curr_pass" placeholder="Mật khẩu hiện tại">
+                <input type="password" id="new_pass" placeholder="Mật khẩu mới">
+                <input type="password" id="confirm_new_pass" placeholder="Xác nhận mật khẩu mới">
+                <button id="save_change_account" class="btn_submit">Cập nhật thông tin</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+      <div>
+        <div class="footer_image_head">
+          <img src="../images/logo.png"/>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <div class="nah">
+          <h3 style="font-size: 22px;">Tổ Yến & Yến Sào Ensure Nest</h3>
+          <p><i class="bx bx-location"></i> Phan Tây Nhạc, Xuân Phương, Hà Nội</p>
+          <p><i class="bx bx-phone"></i> +84 123456789</p>
+          <p><i class="bx bx-envelope"></i>congty@gmail.com</p>
+        </div>
+        
+        <div class="nah">
+          <p style="font-size: 22px;">Tin tức</p>
+          <a href="https://medlatec.vn/tin-tuc/cach-chung-yen-voi-tao-do-sao-cho-dung-de-dam-bao-dinh-duong-tot-cho-suc-khoe?gad_source=1&gad_campaignid=23751994256&gbraid=0AAAAADN9HXzT2l1qWwuYzIWfhpJ5bXCtS&gclid=CjwKCAjwqonVBhA4EiwA9wYJ3drVQFPQgridoISDCO2EazByIENBCzy0J8Ygdw6sBPXMJnuv2mucdxoCE_YQAvD_BwE">Cẩm nang chế biến</a>
+          <a href="https://www.vinmec.com/vie/bai-viet/gia-tri-dinh-duong-trong-yen-sao-vi">Giá trị dinh dưỡng và công dụng</a>
+        </div>
+
+        <div class="nah">
+          <p style="font-size: 22px;">Hỗ trợ</p>
+          <p>Hướng dẫn đặt hàng</p>
+          <p>Hình thức thanh toán</p>
+          <p>Phương thức vận chuyển</p>
+          <p>Chính sách đổi trả</p>
+        </div>
+
+        <div class="footer-image_tail">
+          <img src="../images/nest.png"/>
+        </div>
+
+      </div>
+    </div>
+    
+    <script src="../js/account.js"></script>
+</body>
+</html>

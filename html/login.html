@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="navbar">
+      <div class="left_navbar">
+        <a href="../index.html" id="logo"><img src="../images/logo.png"></a>
+      </div>
+      <div class="center_navbar">
+        <a href="../index.html">Trang chủ</a>
+        <a href="../html/introduce.html">Giới thiệu</a>
+        <a href="../html/product.html">Sản phẩm</a>
+        <a href="../html/contact.html">Liên hệ</a>
+      </div>
+      <div class="right_navbar">
+        <a href="../html/cart.html" id="cart"><i class="bx bx-cart"></i></a>
+        <a href="#" id="account"><i class="bx bx-user"></i></a>
+      </div>
+    </div>
+
+    <div class="container">
+      <form id="login_form" class="auth_card">
+          <h2>Đăng nhập</h2>
+          <input type="text" id="login_email" placeholder="Tên tài khoản hoặc Email" required>
+          <input type="password" id="login_password" placeholder="Mật khẩu" required>
+          <div class="links">
+            <a href="#" id="to_forgot">Quên mật khẩu?</a>
+          </div>
+          <button type="submit">Đăng nhập</button>
+          <div class="switch_text">
+            Chưa có tài khoản?<a href="#" id="to_register"> Đăng ký ngay</a>
+          </div>
+      </form>
+      
+      <form id="register_form" class="auth_card hidden">
+          <h2>Đăng ký</h2>
+          <input type="text" id="reg_name" placeholder="Họ và tên" required>
+          <input type="text" id="reg_phone_number" placeholder="Số điện thoại" required>
+          <input type="email" id="reg_email" placeholder="Email" required>
+          <input type="password" id="reg_password" placeholder="Mật khẩu" required>
+          <input type="password" id="reg_repassword" placeholder="Nhập lại mật khẩu" required>
+          <button type="submit">Đăng ký</button>
+          <div class="switch_text">
+            Đã có tài khoản?<a href="#" id="register_to_login"> Đăng nhập ngay</a>
+          </div>
+      </form>
+      
+      <form id="forgot_form" class="auth_card hidden">
+          <h2>Quên mật khẩu</h2>
+          <div id="forgot_inputs">
+            <input type="email" placeholder="Vui lòng nhập Email" required>
+            <!-- Sửa type="button" để tránh reload form -->
+            <button type="button" id="send_forgot_password">Đặt lại mật khẩu</button>
+          </div>
+          <div id="sucess_msg_box" class="hidden">
+            <p class="sucess_msg_text">Email khôi phục đã được gửi. Vui lòng kiểm tra hòm thư</p>
+            <p class="sub_note">Chức năng này cần phải chờ 10 phút để tiếp tục sử dụng.</p>
+          </div>
+          <div class="switch_text">
+            <a href="#" id="forgot_to_login">Quay lại đăng nhập</a>
+          </div>
+      </form>
+    </div>
+    <script src="../js/login.js"></script>
+</body>
+</html>
